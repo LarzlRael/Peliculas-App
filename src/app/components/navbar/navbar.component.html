@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Peliculas App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" routerLinkActive="router-link-active">
+                    <a class="nav-link" [routerLink]="['/home']">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" routerLinkActive="router-link-active">
+                    <a class="nav-link" [routerLink]="['/pelicula',10]">Otro Link<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0" 
+            (ngSubmit)="buscarPelicula(buscar.value)">
+
+                <input class="form-control mr-sm-2" 
+                #buscar
+                type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Pelis App</h1>
+        <p class="lead">Mira y busas las imagenes mas populares</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Buscar</a>
+        </p>
+    </div>
+</div>
+

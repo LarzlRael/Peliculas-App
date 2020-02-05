@@ -1,0 +1,26 @@
+
+<app-galeria [peliculas]="polulares|slice:0:6"
+titulo="Peliculas Populares"></app-galeria>
+
+
+<app-galeria [peliculas]="ninos|slice:0:6"
+titulo="Peliculas Populares en niños rata"></app-galeria> 
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-3 m-3" *ngFor="let pelicula of peliculas">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="http://image.tmdb.org/t/p/w300/{{pelicula.poster_path}} "
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{pelicula.title}}</h5>
+                    <p class="card-text">{{pelicula.overview}}</p>
+                    <a [routerLink]="['/pelicula',pelicula.id]" class="btn btn-primary">Ver resumen</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div> -->
